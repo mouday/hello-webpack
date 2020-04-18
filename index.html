@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 获取传入的变量 -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <%= htmlWebpackPlugin.options.date %>
+    <div>
+        <div class="box flex" id='app'></div>
+        <div class="box flex" id='app-1'></div>
+        <div class="box-1"></div>
+    </div>
+
+    <!-- 支持js语法 -->
+    <% for(let index in htmlWebpackPlugin.files.js){%>
+    <script index="<%=index %>" src="<%= htmlWebpackPlugin.files.js[index] %>"></script>
+    <%}%>
+    </body>
+
+</html>
